@@ -1,13 +1,19 @@
-// olá mundo!
-const msg = "oi"
-
-{
-    const msg ="eai"
-    console.log(msg);
+// arrays, objetos
+let meta = {
+    value: 'ler um livro por semana',
+    checked: false, 
+    log: (info) => {
+        console.log (info)
+    }
 }
-console.log(msg);
 
-// Uma variável do tipo let pode ser alterada
-// E a do tipo const não pode ser alterada
+meta.value = "não é mais ler um livro"
+meta.log(meta.value)
+
+// function // arrow function
+// const criarMeta = () => {} 
+
+// function criarMeta () {}
+
 
 
