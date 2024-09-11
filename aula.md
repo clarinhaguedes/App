@@ -42,3 +42,7 @@ Uma lista que contém qualquer tipo de dado
 Atributos e métodos
 Criação e manipulação de objetos
 Acesso a propriedades de objetos
+
+# Estrutura de repetição:
+
+while
