@@ -30,6 +30,7 @@ Boolean: true, false
 
 Operadores de atribuição de valor (=)
 Operador de contatenação (+)
+Operadores de comparação (== true or false, 1!=2 diferente de dois, < >, <=, =>)
 
 ## Estruturas de dados:
 
@@ -50,8 +51,13 @@ while
 # Condicionais 
 
 switch
+if/else
 
 # Módulos em Node.js:
 
 Importação de módulos (require, CommonJS)
 Biblioteca 'inquirer' para criar prompts interativos
+
+# Programação assíncrona e Promisses
+
+Uso de funções assíncronas (async/await)
