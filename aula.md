@@ -31,12 +31,14 @@ Boolean: true, false
 Operadores de atribuição de valor (=)
 Operador de contatenação (+)
 Operadores de comparação (== true or false, 1!=2 diferente de dois, < >, <=, =>)
+Spread operator: ...
 
-## Estruturas de dados:
+# Estruturas de dados:
 
 ## Arrays:
 
 Uma lista que contém qualquer tipo de dado
+Métodos de array: push, [find, forEach, filter] : HOF (Higher Order Functions)
 
 ## Objetos:
 
