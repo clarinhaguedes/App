@@ -72,7 +72,7 @@ const metasRealizadas = async () =>
 
     await select 
     ({
-        message: "Metas realizadas " + realizadas.length,
+        message: "Metas realizadas: " + realizadas.length,
         choices: [...realizadas]
     })
    
@@ -94,9 +94,41 @@ const metasAbertas = async () =>
 
         await select 
         ({
-            message: "Metas Abertas " + abertas.length,
+            message: "Metas Abertas: " + abertas.length,
             choices: [...abertas]
         })
+}
+
+const deletarMetas = async () => 
+{
+    const metasDesmarcadas = metas.map ((meta) => 
+    {
+        return {value: meta.value, checked: false}
+    })
+
+    const itensADeletar = await checkbox 
+    ({
+        message: "Selecione um item para deletar ",
+        choices: [...metasDesmarcadas],
+        instructions: false,
+    })
+
+    if (itensADeletar.length == 0)
+    {
+        console.log ("Nenhum item para deletar!")
+        return
+    }
+
+    itensADeletar.forEach ((item) =>
+    {
+        metas = metas.filter ((meta) => 
+        {
+            return meta.value != item
+        })
+    })
+
+    console.log ("Meta(s) deleta(s) com sucesso!")
+
 }
 
 const start = async () =>
@@ -125,6 +157,10 @@ const start = async () =>
                     value: "abertas"
                 },
                 {
+                    name: "Deletar metas",
+                    value: "deletar"
+                },
+                {
                     name: "Sair",
                     value: "sair"
                 }
@@ -149,6 +185,10 @@ const start = async () =>
 
             case "abertas":
                 await metasAbertas ()
+                break
+
+            case "deletar":
+                await deletarMetas ()
                 break
 
             case "sair":
